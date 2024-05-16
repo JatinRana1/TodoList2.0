@@ -25,7 +25,7 @@ export const Homepage = () => {
     try {
       const id = user.userID;
       const res = await axios.get(
-        `https://todolist2-0-qei0.onrender.com//note/${id}`,
+        `https://todolist2-0-qei0.onrender.com/note/${id}`,
         {
           headers: {
             Authorization: user.token,
@@ -40,7 +40,7 @@ export const Homepage = () => {
 
   const handleDeleteTodo = (id) => {
     axios
-      .delete(`https://todolist2-0-qei0.onrender.com//note/${id}`, {
+      .delete(`https://todolist2-0-qei0.onrender.com/note/${id}`, {
         headers: {
           Authorization: user.token,
         },

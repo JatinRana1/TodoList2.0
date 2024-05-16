@@ -23,7 +23,10 @@ app.use((req,res,next)=>{
 app.use("/user", userRouter)
 app.use("/note", noteRouter)
 
-
-
 app.listen(PORT, ()=>{console.log(`Listening on port ${PORT} `)})
 connectDb()
+
+
+sequelize.sync({ logging: false })
+    .then(() => console.log('Database synchronized'))
+    .catch(err => console.error('Error synchronized database: ', err))

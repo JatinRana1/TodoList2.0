@@ -19,8 +19,4 @@ const Todo =  sequelize.define(
         }
     });
 
-sequelize.sync({logging: false})
-    .then(()=> console.log('Database synchronized'))
-    .catch(err => console.error('Error synchronized database: ',err))
-
 module.exports = Todo;

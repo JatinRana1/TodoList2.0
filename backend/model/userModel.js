@@ -1,7 +1,5 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../connection/connectWithDb");
-const Todo = require("./noteModel");
-const { FOREIGNKEYS } = require("sequelize/lib/query-types");
 
 //define todo model
 const User = sequelize.define(
@@ -30,9 +28,5 @@ const User = sequelize.define(
     }
 });
 
-
-sequelize.sync({ logging: false })
-    .then(() => console.log('Database synchronized'))
-    .catch(err => console.error('Error synchronized database: ', err))
 
 module.exports = User;

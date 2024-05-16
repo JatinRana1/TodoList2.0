@@ -11,11 +11,13 @@ const App = () => {
     //routing
     <div className="app">
       <BrowserRouter>
+      <div className="pages">
           <Routes>
             <Route path="/" element={user?<Homepage/>:<Navigate to='/login'/>}/>
             <Route path="/signUp" element={!user?<SignUp/>:<Navigate to='/'/>}/>
             <Route path="/login" element={!user?<Login/>:<Navigate to='/'/>}/>
           </Routes>
+      </div>
       </BrowserRouter>
     </div>
   );

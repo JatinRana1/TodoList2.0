@@ -5,7 +5,7 @@ const CompleteBtn = ({ setToDos, toDos, id, disable }) => {
   const { user } = useAuthContext()
   const handleCompleteTodo = async () => {
     try {    
-      const res = await axios.put(`https://todo-list-009u.onrender.com/note/complete/${id}`,{}, {
+      const res = await axios.put(`https://todolist2-0-qei0.onrender.com/note/complete/${id}`,{}, {
         headers: {
           Authorization: user.token
         },

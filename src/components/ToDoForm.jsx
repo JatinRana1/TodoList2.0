@@ -8,7 +8,7 @@ const ToDoForm = ({ setToDos, toDos }) => {
   const handleCreateTodo = async (values) => {
     try {
       const userValues = {...values, userId: user.userID}
-      const res = await axios.post("https://todo-list-009u.onrender.com/note/", userValues ,{
+      const res = await axios.post("https://todolist2-0-qei0.onrender.com/note/", userValues ,{
         headers: {
           Authorization: user.token
         }

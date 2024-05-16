@@ -11,7 +11,7 @@ export const SignUp = () => {
   const handleSignUp = async () => {
     try {
       const { repeatPassword, ...formValues } = values;
-      const res = await axios.post("https://todo-list-009u.onrender.com/user/signup", formValues);
+      const res = await axios.post("https://todolist2-0-qei0.onrender.com//user/signup", formValues);
       if(res.status === 200){
         setError('')
         resetForm();

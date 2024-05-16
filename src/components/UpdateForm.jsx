@@ -8,7 +8,7 @@ const UpdateForm = ({ setToDos, toDos, updateData, updateFromToggler, setDisable
   const handleUpdateTodo = async (values) => {
     try {
       const id = updateData[0].id;
-      const res = await axios.put(`https://todo-list-009u.onrender.com/note/${id}`, values, {
+      const res = await axios.put(`https://todolist2-0-qei0.onrender.com/note/${id}`, values, {
         headers: {
           Authorization: user.token
         }

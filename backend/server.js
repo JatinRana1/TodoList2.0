@@ -1,5 +1,5 @@
 const express = require('express')
-const { connectDb } = require('./connection/connectWithDb');
+const { connectDb, sequelize } = require('./connection/connectWithDb');
 const userRouter = require('./router/userRouter');
 const noteRouter = require('./router/noteRouter');
 const cors = require('cors')
